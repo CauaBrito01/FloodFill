@@ -12,8 +12,6 @@ public class Pilha {
     public void push(int value) {
         if (top < maxSize - 1) {
             stackArray[++top] = value; // Adiciona um valor ao topo da pilha
-        } else {
-            System.out.println("Pilha cheia. Não é possível inserir mais elementos.");
         }
     }
 
@@ -21,7 +19,6 @@ public class Pilha {
         if (top >= 0) {
             return stackArray[top--]; // Remove e retorna o valor do topo da pilha
         } else {
-            System.out.println("Pilha vazia. Não é possível remover mais elementos.");
             return -1; // Valor para indicar pilha vazia
         }
     }
