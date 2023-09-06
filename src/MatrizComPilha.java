@@ -1,16 +1,16 @@
 public class MatrizComPilha {
-    public static int[][] matriz; // Matriz bidimensional de enteros.
-    public static Pilha pilha;    // Instancia de la clase Pilha (estructura de datos de pila).
+    public static int[][] matriz; // Matriz bidimensional de inteiros.
+    public static Pilha pilha;    // Instância da classe Pilha (estrutura de dados de pilha).
 
-    // Constructor que recibe el número de filas y columnas.
+    // Construtor que recebe o número de linhas e colunas.
     public MatrizComPilha(int linhas, int colunas) {
-        matriz = new int[linhas][colunas]; // Crea una matriz de tamaño linhas x colunas.
-        pilha = new Pilha(linhas);         // Crea una instancia de la clase Pilha con un tamaño igual al número de filas.
-        preencherMatriz();                 // Llama al método preencherMatriz para inicializar la matriz con unos.
-        marcarLinhaDivisoria();            // Llama al método marcarLinhaDivisoria para establecer una línea diagonal de ceros.
+        matriz = new int[linhas][colunas]; // Cria uma matriz de tamanho linhas x colunas.
+        pilha = new Pilha(linhas);         // Cria uma instância da classe Pilha com um tamanho igual ao número de linhas.
+        preencherMatriz();                 // Chama o método preencherMatriz para inicializar a matriz com uns.
+        marcarLinhaDivisoria();            // Chama o método marcarLinhaDivisoria para estabelecer uma linha diagonal de zeros.
     }
 
-    // Llena la matriz con unos.
+    // Preenche a matriz com uns.
     public void preencherMatriz() {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
@@ -19,16 +19,16 @@ public class MatrizComPilha {
         }
     }
 
-    // Establece una línea diagonal de ceros en la matriz y guarda las posiciones en la pila.
+    // Estabelece uma linha diagonal de zeros na matriz e guarda as posições na pilha.
     public void marcarLinhaDivisoria() {
         for (int i = 0; i < matriz.length; i++) {
             int j = i;
-            matriz[i][j] = 0;     // Establece un cero en la posición (i, i).
-            pilha.push(i);        // Guarda la posición (i, i) en la pila.
+            matriz[i][j] = 0;     // Estabelece um zero na posição (i, i).
+            pilha.push(i);        // Guarda a posição (i, i) na pilha.
         }
     }
 
-    // Imprime la matriz en la consola.
+    // Imprime a matriz no console.
     public void imprimirMatriz() {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
@@ -38,7 +38,7 @@ public class MatrizComPilha {
         }
     }
 
-    // Imprime la matriz en un paso específico.
+    // Imprime a matriz em uma etapa específica.
     public void imprimirPassoMatriz(int passo) {
         System.out.println("Passo " + passo + ":");
 
@@ -52,12 +52,12 @@ public class MatrizComPilha {
         System.out.println();
     }
 
-    // Realiza un relleno en la matriz a partir de una posición específica usando una pila.
+    // Realiza um preenchimento na matriz a partir de uma posição específica usando uma pilha.
     public void fillFunction(int linha, int coluna) {
         int passo = 1;
 
         if (matriz[linha][coluna] != 0) {
-            matriz[linha][coluna] = 2; // Marca la posición inicial como 2.
+            matriz[linha][coluna] = 2; // Marca a posição inicial como 2.
 
             imprimirPassoMatriz(passo++);
 
@@ -85,7 +85,7 @@ public class MatrizComPilha {
         }
     }
 
-    // Realiza un relleno en la matriz a partir de una posición específica usando una fila.
+    // Realiza um preenchimento na matriz a partir de uma posição específica usando uma fila.
     public void fillFunctionFila(int linha, int coluna) {
         int passo = 1;
 
