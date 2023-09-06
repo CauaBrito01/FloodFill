@@ -5,7 +5,8 @@
 O sistema estabelece uma matriz de dimensões 10 x 10, procedendo posteriormente a seu preenchimento com valores numéricos iguais a 1. Em sequência, implementa a substituição dos elementos pertencentes à linha diagonal por valores nulos, que desempenham o papel de elementos divisor. Posteriormente, o sistema efetua a substituição de todos os elementos com valor igual a 1 localizados acima da diagonal principal, por meio da utilização do valor 2. Destaca-se que essa operação observa a restrição imposta pela presença do elemento nulo na linha divisória. Todo esse processo é conduzido com a utilização de estruturas de dados do tipo Pilha ou Fila.
 
 Console Inicial:
-![image](https://github.com/CauaBrito01/FloodFill/assets/102918321/c488b98c-9b2c-4742-9d75-61bb3a56ac54)
+
+![image](https://github.com/CauaBrito01/FloodFill/assets/102918321/6ba02b5c-3b09-4618-a002-d3c161dba1e8)
 
 Console Final:
 ![image](https://github.com/CauaBrito01/FloodFill/assets/102918321/67e73af2-faed-43b7-b1da-1c0eb818f17a)
